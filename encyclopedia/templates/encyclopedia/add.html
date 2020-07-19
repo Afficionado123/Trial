@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    
+      {% for i in li %}
+           {% if contentname in i %}
+               
+             <li><a href="{{i |safe}}">{{ i }}</a></li>
+           {% endif %}
+      {% endfor %}
+{% endblock %}
